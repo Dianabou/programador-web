@@ -3,3 +3,6 @@ cuaderno
 libro
 goma de borrar
 cartuchera
+borratinta
+regla
+sacapuntas
