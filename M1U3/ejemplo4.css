@@ -9,11 +9,15 @@ p {
 }
 
 .destacados {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: solid;
     color:blue;
 }
 
 #naranja {
+    position: relative;
+    top: 100px;
+    left: 100px;
     background-color: orange; /*novedades año pasado*/
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     width: 300px;
@@ -22,11 +26,16 @@ p {
 }
 
 #celeste {
+    position:fixed;
+    top:50px;
     background-color: lightblue; /*novedades actuales*/
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 img {
+    position:relative;
+    top:250px;
+    left: 150px;
     border: 12px double #506bff;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     border-radius: 9px 10px 10px 10px;
