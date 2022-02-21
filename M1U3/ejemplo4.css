@@ -1,0 +1,42 @@
+h1 {
+    text-transform: uppercase; /*mayuscula*/
+    text-align: center;
+}
+
+p {
+    color:brown;
+    text-align: justify;
+}
+
+.destacados {
+    text-decoration: solid;
+    color:blue;
+}
+
+#naranja {
+    background-color: orange; /*novedades año pasado*/
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    width: 300px;
+    height: 300px;
+    margin-left: 150px;
+}
+
+#celeste {
+    background-color: lightblue; /*novedades actuales*/
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+img {
+    border: 12px double #506bff;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 9px 10px 10px 10px;
+}
+
+img:hover{
+    filter: sepia(100%);
+}
+
+a:hover{
+    background-color: aqua;
+}
+

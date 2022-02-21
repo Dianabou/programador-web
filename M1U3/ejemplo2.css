@@ -1,0 +1,8 @@
+h1 {
+    text-transform: uppercase; /*mayuscula*/
+    text-align: center;
+}
+p {
+    color:brown;
+    text-align: justify;
+}
