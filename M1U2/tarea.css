@@ -1,0 +1,26 @@
+.contenedor {
+    height: 1500px;
+    background-color: burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+img {
+    width: 300px;
+}
+
+.item {
+    background-color: gray;
+}
+
+P {
+    color: white;
+}
+
+#fijo {
+	position: fixed;
+	top: 0px;
+    right: 0px;
+}
