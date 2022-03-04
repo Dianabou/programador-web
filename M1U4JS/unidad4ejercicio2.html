@@ -8,14 +8,15 @@
 </head>
 <body>
     <script>
-        var numeros=[3,89,1290,18,54,589,29,31,46,2976];
-        var mayor
+        var numero=[3,89,1290,18,54,589,29,31,46,2976];
+        var mayor=0
 
-        for (numeros [0]; numeros [0]>numeros [1]; numeros ++) {
-            const element = array[index];
-            
+        for (var i = 0 ; i < numero.length ; i++) {
+            if (numero[i] > mayor) {mayor=numero[i]};
         }
-        console.log ()
+
+        console.log ('El número mayor de ' + numero + ' es ' + mayor)
+        
     </script>
     
 </body>

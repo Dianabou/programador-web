@@ -16,16 +16,16 @@
 
         var medios = ['a pie','en bicicleta','en colectivo','en auto','en avión'];
 
-        if (metros>0 && metros<1000) {
+        if (metros>0 && metros<=1000) {
             document.write ('Se recomienda recorrido ' + medios [0]);            
         }
-        else if (metros>1000 && metros<10000) {
+        else if (metros>1000 && metros<=10000) {
             document.write ('Se recomienda recorrido ' + medios [1]);
         }
-        else if (metros>10000 && metros<30000) {
+        else if (metros>10000 && metros<=30000) {
             document.write ('Se recomienda recorrido ' + medios [2]);
         }
-        else if (metros>30000 && metros<100000) {
+        else if (metros>30000 && metros<=100000) {
             document.write ('Se recomienda recorrido ' + medios [3]);
         }
         else {
