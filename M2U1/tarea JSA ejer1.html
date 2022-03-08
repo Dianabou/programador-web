@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tarea JSA ejer1.css">
+</head>
+<body>
+    <button id="cuadrado1">click aquí
+    </button>
+    <button id="cuadrado2">click aquí
+    </button>
+    <button id="cuadrado3">click aquí
+    </button>
+
+    <script>
+        var cuadrado1 = document.getElementById('cuadrado1');
+        var cuadrado2 = document.getElementById('cuadrado2');
+        var cuadrado3 = document.getElementById('cuadrado3');
+
+        cuadrado1.addEventListener ('click', function() {
+            cuadrado1.style.backgroundColor = 'black';
+            cuadrado1.style.color = 'white';
+        }
+        )            
+        cuadrado2.addEventListener ('click', function() {
+            cuadrado2.style.backgroundColor = 'yellow';
+        }
+        )
+        cuadrado3.addEventListener ('click', function() {
+            cuadrado3.style.backgroundColor = 'violet';
+            cuadrado3.style.color = 'white';
+        }
+        )
+    </script>
+</body>
+</html>
