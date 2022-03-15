@@ -1,10 +1,17 @@
-.container {
-position: static;
-font-size: xx-large;
-font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-background-color: blue;
-width: 1500 px;
-height: 500 px;
-text-align: center;
+header {
+position: relative;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: rgb(17, 17, 226);
+text-align: left;
 
+}
+.row {
+flex-direction: row;
+justify-content: center;
+padding-top: 20px;
+padding-left: 40px;
+    
+}
+h1 {
+    padding-left: 30px;
 }
