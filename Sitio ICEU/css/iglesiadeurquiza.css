@@ -2,22 +2,27 @@
 font-family: 'Bree Serif', serif
 */
 footer {
-    background-color: grey;
+   background-color: grey;
+   text-align: center;
 
 }
 h1 {
-    font-size: 60px;
-   
+   font-size: 60px;
+   text-shadow: 5px 5px 5px blue;
+
 }
 h2 {
-    font-family: 'Bree Serif', serif;
-   
+   font-family: 'Bree Serif', serif;
+   color:white;
+   background-color: blue;
+   text-align: center;
+
 }
 .hero {
     background: url(https://www.bbvaopenmind.com/wp-content/uploads/2019/07/BBVA-OpenMind-Materia-Agua-1.jpg);
     background-size: cover;
     height: auto;
-    min-height: 400px;
+    min-height: 600px;
     color: white;
     font-family: 'Bree Serif', serif;
     text-align: center;
@@ -29,24 +34,50 @@ h2 {
 }
 .navbar img {
     height: 50px;
+  
+}
+.lista-encuentros {
+    /*centrar con respecto al titulo*/
+    margin: 0 auto;
+    list-style: none;
+    font-family:'Bree Serif', serif;
     
 }
-.lista-mensajes {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+.lista-encuentros img {
+    margin: 5px 10px 5px 5px;
+    
 }
+.lista-encuentros li {
+    margin: 4px 0;
+    background-color: antiquewhite;
+          
+}
+.lista-encuentros li a {
+    text-decoration: none;
+    color: blue;
 
-.lista-mensajes li a video {
+}
+.lista-encuentros li a:hover {
+    color: black;
+    
+}
+.lista-encuentros li a img {
+    width: 50px;
     filter: grayscale();
     transition: all .2s ease-in-out;
+    margin-right: 1rem;
     opacity: 0.7;
 
 }
-.lista-mensajes li a:hover video {
+.lista-encuentros li a:hover img {
     filter: none;
     opacity: 1;
-    margin-left: 0.5cm;
+    margin-right: 1.4rem;
     
-    
+}
+
+.actividad {
+    color: blue;
+    font-family: 'Bree Serif', serif;
+
 }
