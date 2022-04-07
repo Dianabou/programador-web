@@ -75,9 +75,20 @@ h2 {
     margin-right: 1.4rem;
     
 }
-
 .actividad {
     color: blue;
     font-family: 'Bree Serif', serif;
 
+}
+#historia p {
+    background-color: antiquewhite;
+}
+.staff {
+    background-color: antiquewhite;
+}
+.contenedor {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
