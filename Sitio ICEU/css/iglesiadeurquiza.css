@@ -86,9 +86,9 @@ h2 {
 .staff {
     background-color: antiquewhite;
 }
-.contenedor {
+/*.contenedor {
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
+}*/
