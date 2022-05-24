@@ -10,6 +10,7 @@ var pool = require('./models/bd'); //archivo bd
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { getMaxListeners } = require('process');
 
 var app = express();
 
@@ -26,13 +27,51 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// select
+//pool.query("select * from empleados").then(function (resultados) {
+//  console.log(resultados);
+//});
+
+//insert
+//var obj = {
+//  nombre: 'Juan',
+//  apellido: 'Lopez',
+//  trabajo: 'docente',
+//  edad: 38,
+//  salario: 150000,
+//  mail: 'juanlopez@gmail.com'
+//}
+
+//pool.query("insert into empleados set ?", [obj]).then(function (resultados) {
+//  console.log(resultados);
+//});
+
+//update (modificar)
+//var id = 23;
+//var obj = {
+//  nombre: 'Mauricio',
+//  apellido: 'Figueroa'
+//}
+
+//pool.query("update empleados set ? where id_emp=?", [obj, id]).then(function (resultados) {
+//  console.log(resultados);
+//});
+
+//delete
+var id = 21;
+
+pool.query('delete from empleados where id_emp=?', [id]).then(function (resultados) {
+  console.log(resultados);
+});
+
+
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
