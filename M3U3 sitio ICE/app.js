@@ -30,7 +30,7 @@ app.use(session({
   saveUninitialized: true
 }))
 
-secured = async (res, req, next) => {
+secured = async (req, res, next) => {
   try {
      console.log(req.session.id_usuario);
     if (req.session.id_usuario) {
@@ -61,7 +61,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error')
 });
 
 module.exports = app;
