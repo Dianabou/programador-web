@@ -1,10 +1,42 @@
 <div class="container" style="margin-top: 100px;">
+    <div Style="text-right">
+        <h3>Hola, {{usuario}}!!!</h3>
+        <a href="/admin/login" class="btn btn-danger">Cerrar sesión <i class="fa fa-sign-out-alt"></i></a>
+    </div>
+    <div class="row" style="margin-top: 30px">
+        <div class="col-7">
+            <h3>Listado de Novedades</h3>
+        </div>
+        <div class="col-5">
+            <a href="#" class="btn btn-success"> <i class="fa fa-plus"></i>Nuevo</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col">
-            <p class="text-right">
-                <span>Hola, {{usuario}}!!!</span>
-                <a href="/admin/login" class="btn btn-primary">Cerrar sesión <i class="fasfa-sign-out-alt"></i></a>
-            </p>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Subtítulo</th>
+                        <th scope="col" class="text-center">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <th scope="row">{{id}}</th>
+                        <td>{{titulo}}</td>
+                        <td>{{subtitulo}}</td>
+                        <td class="text-center">
+                            <a href="#" title="Editar" class="btn btn-sm btn-secundary"><i class="fa fa-pencil"></i></a>
+                            <a href="/admin/novedades/eliminar/{{id}}" Title="Eliminar"
+                                class="btn btn-sm btn-secundary"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

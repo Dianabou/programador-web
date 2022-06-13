@@ -4,26 +4,26 @@
         <div class="container-fluid">
             <a class="navbar-brand" data-scroll href="#home"><img src="images/logo iglesia sin techo - blanco.png"
                     alt="Home"></a>
-                    <a class="nav-link" data-scroll href="#encuentro">Encuentros</a>
-                    <a class="nav-link" data-scroll href="#historia">Historia</a>
-                    <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
-                    <a class="nav-link" data-scroll href="#visitanos">Visitanos</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                        aria-labelledby="offcanvasNavbarLabel">
-                        <div class="offcanvas-header">
-                            <h5 class="offcanvas-link" id="offcanvasNavbarLabel">Contenido</h5>
-                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                                aria-label="Close"></button>
-                        </div>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                            <button class="btn btn-outline-light" type="submit">Buscar</button>
-                        </form>
-                    </div>
+            <a class="nav-link" data-scroll href="#novedades">Novedades</a>
+            <a class="nav-link" data-scroll href="#historia">Historia</a>
+            <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
+            <a class="nav-link" data-scroll href="#visitanos">Visitanos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-link" id="offcanvasNavbarLabel">Contenido</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
         </div>
     </nav>
     <!--Fin Barra de navegación-->
@@ -37,51 +37,39 @@
         </div>
     </div>
     <!--Fin Hero-->
-    <!--Inicio Encuentros-->
-    <div id="encuentro" class="row py-4">
+    <!--Inicio Novedades-->
+    <div id="novedades" class="row py-4">
         <div class="col-lg-4 col-md-10 offset-lg-1 offset-md-1">
-            <h2>Encuentros</h2>
-            <ul class="lista-encuentros">
-                <li><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
-                            src="images/logo iglesia negro sin techo - transparente.png" alt="">Cena del Señor</a>
+            <h2>Novedades</h2>
+            <ul class="lista-novedades">
+                {{#each novedades}}
+                <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
+                            src="images/logo iglesia negro sin techo - transparente.png" alt="">{{titulo}}</a>
                 </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png" alt="">Oración y
-                        enseñanza
-                        de la Biblia</a>
-                </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png" alt="">Femenino</a>
-                </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png" alt="">Escuela bíblica
-                        para niños</a>
-                </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png"
-                            alt="">Adolescentes</a>
-                </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png" alt="">Jóvenes</a>
-                </li>
-                <li><a href="#"><img src="images/logo iglesia negro sin techo - transparente.png" alt="">Matrimonios y
-                        parejas</a>
-                </li>
+                {{/each}}
             </ul>
         </div>
         <!-- Inicio Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        {{#each novedades}}
+        <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Dias y horarios</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Todos los domingos a las 10,30 hs</p>
+                        <h6>{{subtitulo}}</h6>
+                        <p>{{cuerpo}}</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!--Fin Encuentros y Modal-->
+        {{/each}}
+        <!--Fin Novedades y Modal-->
         <!--Inicio Actividades Especiales-->
         <div class="col-lg-5 col-md-10 offset-md-1 actividades">
             <h2>Actividades Especiales</h2>
@@ -146,8 +134,8 @@
         </div>
     </div>
     <!--Fin Historia-->
+    <!--Comienzo Nosotros-->
     <div id="nosotros" class="row">
-        <!--Comienzo Nosotros-->
         <h2 class="col-lg-10 offset-lg-1 col-md-6">Nosotros</h2>
         <div class="card-group nosotros col-lg-10 offset-lg-1 col-md-6">
             <div class="card">
