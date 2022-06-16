@@ -44,7 +44,7 @@
             <ul class="lista-novedades">
                 {{#each novedades}}
                 <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
-                            src="images/logo iglesia negro sin techo - transparente.png" alt="">{{titulo}}</a>
+                            src="{{imagen}}" width="120" alt="{{titulo}}">{{titulo}}</a>
                 </li>
                 {{/each}}
             </ul>
@@ -56,6 +56,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+                        <img src="{{imagen}}" width="250" alt="{{titulo}}">
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -88,19 +89,19 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active actividad">
-                        <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">Campamento
+                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.23 PM (2).jpeg" class="d-block w-100" alt="...">Campamento
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">Bautismo
+                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (1).jpeg" class="d-block w-100" alt="...">Bautismo
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">Discipulado
+                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (2).jpeg" class="d-block w-100" alt="...">Discipulado
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">Evangelismo
+                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (1).jpeg" class="d-block w-100" alt="...">Evangelismo
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="https://via.placeholder.com/500x500" class="d-block w-100" alt="...">Hora Feliz
+                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.23 PM (2).jpeg" class="d-block w-100" alt="...">Hora Feliz
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
