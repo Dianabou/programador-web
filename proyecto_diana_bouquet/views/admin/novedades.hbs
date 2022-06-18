@@ -4,11 +4,23 @@
         <a href="/admin/login" class="btn btn-danger">Cerrar sesión <i class="fa fa-sign-out-alt"></i></a>
     </div>
     <div class="row" style="margin-top: 30px">
-        <div class="col-7">
+        <div class="col-6">
             <h3>Listado de Novedades</h3>
         </div>
-        <div class="col-5">
+        <div class="col-2">
             <a href="/admin/novedades/agregar" class="btn btn-success"> <i class="fa fa-plus"></i>Nuevo</a>
+        </div>
+        <div class="col-4">
+            <form action="/admin/novedades" method="get">
+                <div class="row">
+                    <div class="col">
+                        <input type="search" class="form-control" placeholder="Buscar" aria-label="Search" name="q" {{#if q}} value="{{q}}" {{/if}}>
+                    </div>
+                    <div class="col"><button class="btn btn-secundary my-2 my-sm-0" type="submit"><i
+                                class="fa fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
     <div class="row">
@@ -31,7 +43,8 @@
                         <td>{{{imagen}}}</td>
                         <td>{{subtitulo}}</td>
                         <td class="text-center">
-                            <a href="/admin/novedades/modificar/{{id}}" title="Modificar" class="btn btn-sm btn-secundary"><i class="fa fa-pencil"></i></a>
+                            <a href="/admin/novedades/modificar/{{id}}" title="Modificar"
+                                class="btn btn-sm btn-secundary"><i class="fa fa-pencil"></i></a>
                             <a href="/admin/novedades/eliminar/{{id}}" title="Eliminar"
                                 class="btn btn-sm btn-secundary"><i class="fa fa-trash"></i></a>
                         </td>
@@ -39,6 +52,11 @@
                     {{/each}}
                 </tbody>
             </table>
+            {{#if is_search}}
+            {{#unless novedades.length}}
+            No se encontraron resultados para "<b>{{q}}</b>"
+            {{/unless}}
+            {{/if}}
         </div>
     </div>
 </div>

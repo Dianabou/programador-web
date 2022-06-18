@@ -1,6 +1,6 @@
 <body>
     <!--Inicio Barra de navegación-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" data-scroll href="#home"><img src="images/logo iglesia sin techo - blanco.png"
                     alt="Home"></a>
@@ -14,14 +14,20 @@
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
+                {{!-- <div class="offcanvas-header">
                     <h5 class="offcanvas-link" id="offcanvasNavbarLabel">Contenido</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
-                </div>
+                </div> --}}
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    <div class="row">
+                        <div class="col-10"><input class="form-control me-10" type="search"
+                                placeholder="Buscar en Novedades" aria-label="Search">
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-light" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -89,19 +95,21 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active actividad">
-                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.23 PM (2).jpeg" class="d-block w-100" alt="...">Campamento
+                        <img src="images/grupo_alabanza.jpeg" class="d-block w-100" alt="...">Campamento
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (1).jpeg" class="d-block w-100" alt="...">Bautismo
+                        <img src="images/grupo_alabanza2.jpeg" class="d-block w-100" alt="...">Bautismo
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (2).jpeg" class="d-block w-100" alt="...">Discipulado
+                        <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655403945/gww3ymkbuqglrkzlufmc.jpg"
+                            class="d-block w-100" alt="...">Discipulado
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.24 PM (1).jpeg" class="d-block w-100" alt="...">Evangelismo
+                        <img src="images/act_ado.jpeg" class="d-block w-100" alt="...">Evangelismo
                     </div>
                     <div class="carousel-item actividad">
-                        <img src="images/WhatsApp Image 2022-06-16 at 1.25.23 PM (2).jpeg" class="d-block w-100" alt="...">Hora Feliz
+                        <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655392569/rahx1jhv8l1wt6cx32hn.jpg"
+                            class="d-block w-100" alt="...">Hora Feliz
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

@@ -23,7 +23,7 @@ router.get('/', async function (req, res, next) {
     } else {
       return {
         ...novedad,
-        imagen: '/images/logo iglesia sin techo - blanco.png' 
+        imagen: '/images/logo iglesia sin techo - blanco.png'
       }
     }
   });
@@ -58,7 +58,10 @@ router.post('/', async (req, res, next) => {
 
   var info = await transport.sendMail(obj);
 
-  res.render('index', {
+  //   res.render('index', {
+  //   message: 'Mensaje enviado correctamente',
+  //   });
+  res.json({
     message: 'Mensaje enviado correctamente',
   });
 });
