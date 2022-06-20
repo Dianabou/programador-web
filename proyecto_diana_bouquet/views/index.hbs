@@ -9,7 +9,8 @@
             <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
             <a class="nav-link" data-scroll href="#ig">Seguinos por IG</a>
             <a class="nav-link" data-scroll href="#visitanos">Visitanos</a>
-            <a class="nav-link" data-scroll href="#comunicate">Contacto</a>
+            <a class="nav-link" data-scroll href="#comunicate">Contacto por mail</a>
+            <a class="nav-link" data-scroll href="/admin/login" target="_blank">Admin</a>
             {{!--<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -148,8 +149,10 @@
                 <img src="https://via.placeholder.com/650x500" alt="" class="img-fluid">
             </div>
         </div>
+
     </div>
     <!--Fin Historia-->
+
     <!--Comienzo Nosotros-->
     <div class="container" style="margin-top: 200px">
         <div id="nosotros" class="row">
@@ -191,8 +194,8 @@
     <!--Fin Nosotros-->
     <!--Comienzo Visitanos-->
     <div class="container" style="margin-top: 200px">
-        <div id="visitanos" class="row py-4">
-            <div class="col-md-4 offset-md-1">
+        <div id="visitanos" class="row">
+            <div class="col-md-5">
                 <h2>Visitanos</h2>
                 <div class="embed-responsive embed-responsive-16by9">
                     <iframe class="embed-responsive-item"
@@ -200,7 +203,7 @@
                         style="border:0;width:100%;height:45vh;"></iframe>
                 </div>
             </div>
-            <div id="comunicate" class="col-md-6">
+            <div id="comunicate" class="col-md-7">
                 <h2>Comunicate con nosotros</h2>
                 <form action="/" method="post" id="contact_form">
                     <div class="row">
@@ -228,6 +231,9 @@
                 {{message}}
                 {{/if}}
             </div>
+            <div class="col md-2 fixed-bottom"><a
+                    href="https://api.whatsapp.com/send?phone=5491124445321&text=Hola" target="_blank"><img
+                        src="https://res.cloudinary.com/dhwtepv6z/image/upload/w_200,h_200,c_fill,r_max/logo_wapp_f_transp_ii0ezs.png" alt="" width="150px"></a></div>
         </div>
     </div>
     <!--Fin Visitanos
