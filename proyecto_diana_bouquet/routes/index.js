@@ -8,7 +8,7 @@ var cloudinary = require('cloudinary').v2;
 router.get('/', async function (req, res, next) {
   var novedades = await novedadesModel.getNovedades();
 
-  novedades = novedades.splice(0, 5); //selecciona los primeros 5 elementos del array 
+  novedades = novedades.splice(0, 7); //selecciona los primeros 5 elementos del array 
 
   novedades = novedades.map(novedad => {
     if (novedad.img_id) {
@@ -44,7 +44,7 @@ router.post('/', async (req, res, next) => {
   var obj = {
     to: 'bouquetdiana@gmail.com',
     subject: 'Contacto desde la web Iglesia de Urquiza',
-    html: nombre + " " + apellido + " " + " se contacto atravez y quiere mas info al correo:" + email + ". <br> Además, hizo el siguiente comentario: " + mensaje
+    html: nombre + " " + apellido + " " + " se contacto y quiere mas info al correo:" + email + ". <br> Además, hizo el siguiente comentario: " + mensaje
   }
 
   var transport = nodemailer.createTransport({

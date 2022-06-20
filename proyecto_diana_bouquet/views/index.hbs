@@ -1,24 +1,26 @@
 <body>
     <!--Inicio Barra de navegación-->
-    <nav class="navbar navbar-expand-lg navbar bg-dark fixed-top">
+    <nav class="navbar navbar-expand-me navbar bg-dark fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" data-scroll href="#home"><img src="images/logo iglesia sin techo - blanco.png"
-                    alt="Home"></a>
+                    width="40" height="40" class="d-inline-block align-text-center" alt="Home"></a>
             <a class="nav-link" data-scroll href="#novedades">Novedades</a>
             <a class="nav-link" data-scroll href="#historia">Historia</a>
             <a class="nav-link" data-scroll href="#nosotros">Nosotros</a>
+            <a class="nav-link" data-scroll href="#ig">Seguinos por IG</a>
             <a class="nav-link" data-scroll href="#visitanos">Visitanos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar">
+            <a class="nav-link" data-scroll href="#comunicate">Contacto</a>
+            {{!--<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
-                {{!-- <div class="offcanvas-header">
+                <div class="offcanvas-header">
                     <h5 class="offcanvas-link" id="offcanvasNavbarLabel">Contenido</h5>
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
-                </div> --}}
+                </div>
                 <form class="d-flex">
                     <div class="row">
                         <div class="col-10"><input class="form-control me-10" type="search"
@@ -29,7 +31,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div>--}}
         </div>
     </nav>
     <!--Fin Barra de navegación-->
@@ -44,186 +46,197 @@
     </div>
     <!--Fin Hero-->
     <!--Inicio Novedades-->
-    <div id="novedades" class="row py-4">
-        <div class="col-lg-4 col-md-10 offset-lg-1 offset-md-1">
-            <h2>Novedades</h2>
-            <ul class="lista-novedades">
-                {{#each novedades}}
-                <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
-                            src="{{imagen}}" width="120" alt="{{titulo}}">{{titulo}}</a>
-                </li>
-                {{/each}}
-            </ul>
-        </div>
-        <!-- Inicio Modal -->
-        {{#each novedades}}
-        <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
-                        <img src="{{imagen}}" width="250" alt="{{titulo}}">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h6>{{subtitulo}}</h6>
-                        <p>{{cuerpo}}</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+    <div class="container" style="margin-top: 200px" id="novedades">
+        <div class="row py-4">
+            <div class="col-lg-4 col-md-10 offset-lg-1 offset-md-1">
+                <h2>Novedades</h2>
+                <ul class="lista-novedades">
+                    {{#each novedades}}
+                    <li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#modal{{id}}"><img
+                                src="{{imagen}}" width="120" alt="{{titulo}}">{{titulo}}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            <!-- Inicio Modal -->
+            {{#each novedades}}
+            <div class="modal fade" id="modal{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">{{titulo}}</h5>
+                            <img src="{{imagen}}" width="250" alt="{{titulo}}">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>{{subtitulo}}</h6>
+                            <p>{{cuerpo}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        {{/each}}
-        <!--Fin Novedades y Modal-->
-        <!--Inicio Actividades Especiales-->
-        <div class="col-lg-5 col-md-10 offset-md-1 actividades">
-            <h2>Actividades Especiales</h2>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
+            {{/each}}
+            <!--Fin Novedades y Modal-->
+            <!--Inicio Actividades Especiales-->
+            <div class="col-lg-5 col-md-10 offset-md-1 actividades" id="ig">
+                <h2>Seguinos por redes sociales</h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active actividad">
+                            <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/w_800,h_800,c_pad/logo_iglesia_negro_sin_techo_-_transparente_nmsdcs.png"
+                                class="d-block w-100" alt="...">INSTAGRAM "iglesiadeurquiza"
+                        </div>
+                        <div class="carousel-item actividad">
+                            <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655677846/J%C3%B3venes_sin_fondo_2_ofegrw.png"
+                                class="d-block w-100" alt="...">INSTAGRAM "jovenesurquiza"
+                        </div>
+                        <div class="carousel-item actividad">
+                            <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/w_800,h_800,c_pad/logo-transformer2_oasyhl.png"
+                                style="background-color:black" class="d-block w-100" alt="...">INSTAGRAM
+                            "adolescentesroosevelt"
+                        </div>
+                        <div class="carousel-item actividad">
+                            <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655673583/logo_escuelita_ts3cxh.jpg"
+                                class="d-block w-100" alt="...">INSTAGRAM "escuelabiblicaurquiza"
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active actividad">
-                        <img src="images/grupo_alabanza.jpeg" class="d-block w-100" alt="...">Campamento
-                    </div>
-                    <div class="carousel-item actividad">
-                        <img src="images/grupo_alabanza2.jpeg" class="d-block w-100" alt="...">Bautismo
-                    </div>
-                    <div class="carousel-item actividad">
-                        <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655403945/gww3ymkbuqglrkzlufmc.jpg"
-                            class="d-block w-100" alt="...">Discipulado
-                    </div>
-                    <div class="carousel-item actividad">
-                        <img src="images/act_ado.jpeg" class="d-block w-100" alt="...">Evangelismo
-                    </div>
-                    <div class="carousel-item actividad">
-                        <img src="https://res.cloudinary.com/dhwtepv6z/image/upload/v1655392569/rahx1jhv8l1wt6cx32hn.jpg"
-                            class="d-block w-100" alt="...">Hora Feliz
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
     </div>
     <!--Fin Actividades Especiales-->
     <!--Comienzo Historia-->
-    <div id="historia" class="row py-4 contenedor">
-        <div class="col-lg-4 offset-lg-1 item">
-            <h2>Historia</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eos dolore, nihil, accusantium numquam
-                amet rerum quam soluta pariatur illum quaerat a velit quod quos officia maiores corrupti dolorum ex!
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores officiis optio illo ad possimus! Natus
-                eaque error consequuntur eum hic rem. Omnis quibusdam quo hic et commodi culpa doloribus architecto!</p>
-        </div>
-        <div class="col-lg-3 col-md-3 item">
-            <img src="https://via.placeholder.com/650x500" alt="" class="img-fluid">
-        </div>
-        <div class="col-lg-3 col-md-3 item">
-            <img src="https://via.placeholder.com/650x500" alt="" class="img-fluid">
+    <div class="container" style="margin-top: 200px">
+        <div id="historia" class="row py-4 contenedor">
+            <div class="col-lg-4 offset-lg-1 item">
+                <h2>Historia</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eos dolore, nihil, accusantium numquam
+                    amet rerum quam soluta pariatur illum quaerat a velit quod quos officia maiores corrupti dolorum ex!
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores officiis optio illo ad possimus!
+                    Natus
+                    eaque error consequuntur eum hic rem. Omnis quibusdam quo hic et commodi culpa doloribus architecto!
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-3 item">
+                <img src="https://via.placeholder.com/650x500" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-3 col-md-3 item">
+                <img src="https://via.placeholder.com/650x500" alt="" class="img-fluid">
+            </div>
         </div>
     </div>
     <!--Fin Historia-->
     <!--Comienzo Nosotros-->
-    <div id="nosotros" class="row">
-        <h2 class="col-lg-10 offset-lg-1 col-md-6">Nosotros</h2>
-        <div class="card-group nosotros col-lg-10 offset-lg-1 col-md-6">
-            <div class="card">
-                <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-                <div class="card-body staff">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    <div class="container" style="margin-top: 200px">
+        <div id="nosotros" class="row">
+            <h2 class="col-lg-10 offset-lg-1 col-md-6">Nosotros</h2>
+            <div class="card-group nosotros col-lg-10 offset-lg-1 col-md-6">
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
+                    <div class="card-body staff">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-                <div class="card-body staff">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.
-                    </p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
+                    <div class="card-body staff">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
+                            content.
+                        </p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
-                <div class="card-body staff">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This card has even longer content than the first to show that equal height
-                        action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x200" class="card-img-top" alt="...">
+                    <div class="card-body staff">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This card has even longer content than the first to show that equal
+                            height
+                            action.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--Fin Nosotros-->
     <!--Comienzo Visitanos-->
-    <div id="visitanos" class="row py-4">
-        <div class="col-md-4 offset-md-1">
-            <h2>Visitanos</h2>
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.10932050645!2d-58.494382685442616!3d-34.57610031354299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7b6f7e06811%3A0x3583d74c3a724590!2sIglesia%20Urquiza!5e0!3m2!1ses-419!2sar!4v1649186415514!5m2!1ses-419!2sar"
-                    style="border:0;width:100%;height:45vh;"></iframe>
+    <div class="container" style="margin-top: 200px">
+        <div id="visitanos" class="row py-4">
+            <div class="col-md-4 offset-md-1">
+                <h2>Visitanos</h2>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.10932050645!2d-58.494382685442616!3d-34.57610031354299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb7b6f7e06811%3A0x3583d74c3a724590!2sIglesia%20Urquiza!5e0!3m2!1ses-419!2sar!4v1649186415514!5m2!1ses-419!2sar"
+                        style="border:0;width:100%;height:45vh;"></iframe>
+                </div>
+            </div>
+            <div id="comunicate" class="col-md-6">
+                <h2>Comunicate con nosotros</h2>
+                <form action="/" method="post" id="contact_form">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" aria-label="First name"
+                                name="nombre">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name"
+                                name="apellido">
+                        </div>
+                        <div class="mb-3 py-3">
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email"
+                                name="email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensaje"
+                                rows="3" name="mensaje"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-dark bg-dark">Enviar</button>
+                    <span id="feedback"></span>
+                </form>
+                {{#if message}}
+                {{message}}
+                {{/if}}
             </div>
         </div>
-        <div id="comunicate" class="col-md-6">
-            <h2>Comunicate con nosotros</h2>
-            <form action="/" method="post">
-                <div class="row">
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Nombre" aria-label="First name"
-                            name="nombre">
-                    </div>
-                    <div class="col">
-                        <input type="text" class="form-control" placeholder="Apellido" aria-label="Last name"
-                            name="apellido">
-                    </div>
-                    <div class="mb-3 py-3">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email"
-                            name="email">
-                    </div>
-                    <div class="mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensaje" rows="3"
-                            name="mensaje"></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="btn-dark bg-dark">Enviar</button>
-            </form>
-            {{#if message}}
-            {{message}}
-            {{/if}}
-        </div>
     </div>
-    <!--Fin Visitanos-->
+    <!--Fin Visitanos
     <div class="col-lg-10 offset-lg-1 col-md-6">
         <h2>Seguinos por Redes sociales</h2>
-        <!--agregar redes sociales con botones-->
-        <ul>
+               <ul>
             <button></button>
         </ul>
-    </div>
+    </div>-->
     <footer>
         <p>Diseñado por: Diana Bouquet</p>
     </footer>

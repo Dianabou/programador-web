@@ -93,3 +93,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
 }*/
+.actividad img {
+    width: 250px;
+    height: 350px
+}
